@@ -45,5 +45,5 @@ echo "customize my unity dash..."
 gsettings set com.canonical.Unity.Launcher launcher-position Bottom
 gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true
 
-echo "my update command"
-sudo bash -c "echo 'alias mtain=\"sudo aptitude update && sudo aptitude full-upgrade; apm update\"'>> /etc/bash.bashrc"
+echo "set up aliases"
+cp .bash_aliases ~

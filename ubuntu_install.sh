@@ -14,12 +14,13 @@ add_repo "ppa:mc3man/mpv-tests"
 add_repo "ppa:ubuntu-toolchain-r/test"
 add_repo "ppa:snwh/pulp"
 add_repo "ppa:webupd8team/atom"
+add_repo "ppa:neovim-ppa/unstable"
 
 sudo apt-get update
 sudo apt-get dist-upgrade --yes
 
 echo "install packages"
-sudo apt-get install --yes aptitude gdebi geany vim  git cmake valgrind valkyrie cppcheck cppcheck-gui gcc g++ vlc skype doublecmd-qt clipit mpv build-essential paper-gtk-theme paper-icon-theme atom fonts-hack-ttf gnome-tweak-tool clang gdb caffeine guake openjdk-8-jre openjdk-8-jre meld dconf-editor caffeine tree
+sudo apt-get install --yes aptitude gdebi geany vim  git cmake valgrind valkyrie cppcheck cppcheck-gui gcc g++ vlc skype doublecmd-qt clipit mpv build-essential paper-gtk-theme paper-icon-theme atom fonts-hack-ttf gnome-tweak-tool clang gdb caffeine guake openjdk-8-jre openjdk-8-jre meld dconf-editor caffeine tree rsync software-properties-common neovim
 
 echo "remove unnecessary packages"
 sudo apt-get remove --purge --yes thunderbird
@@ -38,7 +39,11 @@ cd ~
 mkdir repos
 mkdir zakota
 mkdir builds
+mkdir --parents tools/scripts
 
 echo "customize my unity dash..."
 gsettings set com.canonical.Unity.Launcher launcher-position Bottom
 gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true
+
+echo "my update command"
+sudo bash -c "echo 'alias mtain=\"sudo aptitude update && sudo aptitude full-upgrade; apm update\"'>> /etc/bash.bashrc"

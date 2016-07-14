@@ -28,11 +28,11 @@ sudo apt-get remove --purge --yes thunderbird
 echo "git configuration"
 git config --global user.name vitalyos
 git config --global user.email vitalyos@users.noreply.github.com
-git config --global core.editor vim
+git config --global core.editor nvim
 git config --global diff.tool meld
 
 echo "install atom packages"
-apm install atom-arma-language file-icons linter-swiftc atom-beautify hex	material-design-syntax atom-material-syntax language-cmake material-ui atom-material-syntax-dark language-cpp14 native-ui atom-material-syntax-light language-dot-template pdf-view atom-material-ui language-haskell php-composer-completion atom-terminus language-ini autocomplete language-latex autocomplete-cmake language-qml swift-debugger language-swift tag autocomplete-plus latex terminal-plus autocomplete-swift latex-completions todo-show autocomplete-xml line-count xcode-syntax build-tools linter xml-formatter build-xcodebuild linter-cppcheck xml-tools cpp-refactor linter-cpplint set-syntax
+apm install atom-arma-language file-icons linter-swiftc atom-beautify hex material-design-syntax atom-material-syntax language-cmake material-ui atom-material-syntax-dark language-cpp14 native-ui atom-material-syntax-light language-dot-template pdf-view atom-material-ui language-haskell php-composer-completion atom-terminus language-ini autocomplete language-latex autocomplete-cmake language-qml swift-debugger language-swift tag autocomplete-plus latex terminal-plus autocomplete-swift latex-completions todo-show autocomplete-xml line-count xcode-syntax build-tools linter xml-formatter build-xcodebuild linter-cppcheck xml-tools cpp-refactor linter-cpplint set-syntax atom-runner python-tools
 
 echo "create my folder structure"
 cd ~

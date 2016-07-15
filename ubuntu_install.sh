@@ -20,7 +20,7 @@ sudo apt-get update
 sudo apt-get dist-upgrade --yes
 
 echo "install packages"
-sudo apt-get install --yes aptitude gdebi geany vim  git cmake valgrind valkyrie cppcheck cppcheck-gui gcc g++ vlc skype doublecmd-qt clipit mpv build-essential paper-gtk-theme paper-icon-theme atom fonts-hack-ttf gnome-tweak-tool clang gdb caffeine guake openjdk-8-jre openjdk-8-jre meld dconf-editor caffeine tree rsync software-properties-common neovim
+sudo apt-get install --yes aptitude gdebi geany vim  git cmake valgrind valkyrie cppcheck cppcheck-gui gcc g++ vlc skype doublecmd-qt clipit mpv build-essential paper-gtk-theme paper-icon-theme atom fonts-hack-ttf gnome-tweak-tool clang gdb caffeine guake openjdk-8-jre openjdk-8-jre meld dconf-editor caffeine tree rsync software-properties-common neovim maven
 
 echo "remove unnecessary packages"
 sudo apt-get remove --purge --yes thunderbird

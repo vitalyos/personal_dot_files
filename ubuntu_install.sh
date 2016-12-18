@@ -9,6 +9,9 @@ add_repo() {
   sudo add-apt-repository --yes $1;
 }
 
+echo "install software-properties-common"
+sudo apt-get install software-properties-common
+
 echo "add repos"
 add_repo "ppa:mc3man/mpv-tests"
 add_repo "ppa:ubuntu-toolchain-r/test"

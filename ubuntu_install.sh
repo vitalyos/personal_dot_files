@@ -56,3 +56,12 @@ echo "install skype for linux alpha"
 wget -O $skp_bin https://go.skype.com/skypeforlinux-64-alpha.deb
 sudo gdebi $skp_bin
 rm $skp_bin
+
+echo "configure neovim"
+sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
+sudo update-alternatives --config vi
+sudo update-alternatives --install /usr/bin/vim vim /usr/bin/nvim 60
+sudo update-alternatives --config vim
+sudo update-alternatives --install /usr/bin/editor editor /usr/bin/nvim 60
+sudo update-alternatives --config editor
+

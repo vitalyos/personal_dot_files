@@ -51,8 +51,8 @@ gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshel
 echo "set up aliases"
 cp .bash_aliases ~
 
-skp_bin=skpe.deb
 echo "install skype for linux alpha"
+skp_bin=skype.deb
 wget -O $skp_bin https://go.skype.com/skypeforlinux-64-alpha.deb
 sudo gdebi $skp_bin
 rm $skp_bin

@@ -9,6 +9,15 @@ add_repo() {
   sudo add-apt-repository --yes $1;
 }
 
+install_from_url() {
+   file_name=$1
+   url=$2
+   echo "installing $file_name  from $url"
+   wget -O $file_name $url
+   sudo gdebi $file_name
+   rm $file_name
+}
+
 echo "install software-properties-common"
 sudo apt-get install software-properties-common
 
@@ -52,10 +61,7 @@ echo "set up aliases"
 cp .bash_aliases ~
 
 echo "install skype for linux alpha"
-skp_bin=skype.deb
-wget -O $skp_bin https://go.skype.com/skypeforlinux-64-alpha.deb
-sudo gdebi $skp_bin
-rm $skp_bin
+install_from_url skype.deb https://go.skype.com/skypeforlinux-64-alpha.deb
 
 echo "configure neovim"
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60

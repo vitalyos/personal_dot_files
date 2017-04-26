@@ -63,6 +63,9 @@ cp .bash_aliases ~
 echo "install skype for linux"
 install_from_url skype.deb https://repo.skype.com/latest/skypeforlinux-64.deb
 
+echo "install viber"
+install_from_url viber.deb https://download.cdn.viber.com/cdn/desktop/Linux/viber.deb
+
 echo "configure neovim"
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
 sudo update-alternatives --config vi

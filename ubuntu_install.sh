@@ -60,8 +60,8 @@ gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshel
 echo "set up aliases"
 cp .bash_aliases ~
 
-echo "install skype for linux alpha"
-install_from_url skype.deb https://go.skype.com/skypeforlinux-64-alpha.deb
+echo "install skype for linux"
+install_from_url skype.deb https://repo.skype.com/latest/skypeforlinux-64.deb
 
 echo "configure neovim"
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60

@@ -67,6 +67,9 @@ install_from_url skype.deb https://repo.skype.com/latest/skypeforlinux-64.deb
 echo "install viber"
 install_from_url viber.deb https://download.cdn.viber.com/cdn/desktop/Linux/viber.deb
 
+echo "install google chrome"
+install_from_url chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
 echo "configure neovim"
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
 sudo update-alternatives --config vi
